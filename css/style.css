@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /* Reset all elements */
 *,
 *::before,
@@ -24,6 +25,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: hsl(32, 60%, 95.1%);
   color: hsl(0, 0.76%, 25.69%);
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 /* Remove border and outline on focus for better accessibility */
@@ -68,7 +73,6 @@ table {
 /* Make images responsive */
 img {
   max-width: 100%;
-  height: auto;
   display: block;
 }
 
@@ -115,6 +119,7 @@ html,
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Questrial", serif;
 }
 
 /* Remove default form input styling in iOS */
@@ -141,15 +146,141 @@ p {
 }
 
 main {
-  width: min(100%, 87.5rem);
+  width: min(100%, 100rem);
   margin: 0 auto;
   position: relative;
+  padding: 0 60px;
 }
 
-header {
+.box {
+  position: fixed;
+  top: 0;
+  transform: rotate(80deg);
+  left: 0;
+}
+
+.wave {
+  position: absolute;
+  opacity: 0.4;
+  width: 1200px;
+  height: 1300px;
+  margin-left: -50em;
+  margin-top: -16em;
+  border-radius: 40%;
+}
+
+.wave.-one {
+  animation: rotate 10000ms infinite linear;
+  opacity: 50%;
+  background: #f9bbe6;
+}
+
+.wave.-two {
+  animation: rotate 6000ms infinite linear;
+  opacity: 80%;
+  background: #f9bbe6;
+}
+
+.box2 {
+  position: fixed;
+  transform: rotate(80deg);
+  right: 0;
+  top: 0;
+}
+
+.wave-r {
+  position: absolute;
+  opacity: 0.4;
+  width: 1200px;
+  height: 1300px;
+  margin-left: 42em;
+  margin-top: -48em;
+  border-radius: 40%;
+}
+
+.wave-r.-one {
+  animation: rotate 10000ms infinite linear;
+  opacity: 50%;
+  background: #f9bbe6;
+}
+
+.wave-r.-two {
+  animation: rotate 6000ms infinite linear;
+  opacity: 80%;
+  background: #f9bbe6;
+}
+
+.jacky-img {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 2rem 0;
+  height: 94vh;
+}
+.jacky-img figure img {
+  width: 50rem;
+  margin: 0 auto;
+  filter: drop-shadow(0 -6mm 4mm #e0218a);
+}
+.jacky-img h2 {
+  color: #333;
+  letter-spacing: 6px;
+  font-size: clamp(1rem, 4vw, 7rem);
+  text-align: center;
+  text-shadow: 0.1em 0.1em 0 hsl(0, 0%, 69.44%);
+}
+.jacky-img h2 small span {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  display: inline-block;
+}
+.jacky-img h2 small span:hover {
+  cursor: pointer;
+}
+
+.bounce {
+  animation-name: bounce;
+}
+
+.gif-stickers {
+  width: 100%;
+}
+.gif-stickers .brainrot {
+  position: absolute;
+  right: 5%;
+  top: 0;
+  width: 20rem;
+}
+.gif-stickers .max-cat {
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  width: 16rem;
+}
+
+/* For wave keyframes */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+/* Bouncing Letters */
+@keyframes bounce {
+  20%, 50%, 80%, to {
+    transform: scale(1, 1);
+  }
+  40%, 45% {
+    transform: scale(1.75, 0.65);
+  }
+  60% {
+    transform: scale(1.25, 0.75);
+  }
+  90% {
+    transform: scale(1.15, 0.85);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

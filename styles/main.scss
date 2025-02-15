@@ -2,6 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 h2 {
   font-family: $priFont;
@@ -17,7 +18,152 @@ p {
 }
 
 main {
-  width: min(100%, 87.5rem);
+  width: min(100%, 100rem);
   margin: 0 auto;
   position: relative;
+  padding: 0 60px;
+}
+
+.box {
+  position: fixed;
+  top: 0;
+  transform: rotate(80deg);
+  left: 0;
+}
+
+.wave {
+  position: absolute;
+  opacity: 0.4;
+  width: 1200px;
+  height: 1300px;
+  margin-left: -50em;
+  margin-top: -16em;
+  border-radius: 40%;
+}
+
+.wave.-one {
+  animation: rotate 10000ms infinite linear;
+  opacity: 50%;
+  background: $mainColor;
+}
+
+.wave.-two {
+  animation: rotate 6000ms infinite linear;
+  opacity: 80%;
+  background: $mainColor;
+}
+
+.box2 {
+  position: fixed;
+  transform: rotate(80deg);
+  right: 0;
+  top: 0;
+}
+
+.wave-r {
+  position: absolute;
+  opacity: 0.4;
+  width: 1200px;
+  height: 1300px;
+  margin-left: 42em;
+  margin-top: -48em;
+  border-radius: 40%;
+}
+
+.wave-r.-one {
+  animation: rotate 10000ms infinite linear;
+  opacity: 50%;
+  background: $mainColor;
+}
+
+.wave-r.-two {
+  animation: rotate 6000ms infinite linear;
+  opacity: 80%;
+  background: $mainColor;
+}
+
+.jacky-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 94vh;
+
+  figure {
+    img {
+      width: 50rem;
+      margin: 0 auto;
+      filter: drop-shadow(0 -6mm 4mm #e0218a);
+    }
+  }
+  h2 {
+    color: #333;
+    letter-spacing: 6px;
+    font-size: clamp(1rem, 4vw, 7rem);
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0 hsl(0deg 0% 69.44%);
+    small {
+      span {
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        display: inline-block;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+}
+
+.gif-stickers {
+  width: 100%;
+
+  .brainrot {
+    position: absolute;
+    right: 5%;
+    top: 0;
+    width: 20rem;
+  }
+
+  .max-cat {
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+    width: 16rem;
+  }
+}
+
+/* For wave keyframes */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+/* Bouncing Letters */
+@keyframes bounce {
+  20%,
+  50%,
+  80%,
+  to {
+    transform: scale(1, 1);
+  }
+  40%,
+  45% {
+    transform: scale(1.75, 0.65);
+  }
+  60% {
+    transform: scale(1.25, 0.75);
+  }
+  90% {
+    transform: scale(1.15, 0.85);
+  }
 }

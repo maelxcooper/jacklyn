@@ -24,6 +24,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: hsl(32deg 60% 95.1%);
   color: hsl(0deg 0.76% 25.69%);
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 /* Remove border and outline on focus for better accessibility */
@@ -68,7 +72,6 @@ table {
 /* Make images responsive */
 img {
   max-width: 100%;
-  height: auto;
   display: block;
 }
 
@@ -115,6 +118,7 @@ html,
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: $secFont;
 }
 
 /* Remove default form input styling in iOS */
