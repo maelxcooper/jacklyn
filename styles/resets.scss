@@ -1,0 +1,128 @@
+@use "variables" as *;
+
+/* Reset all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default font settings */
+html {
+  font-size: 100%; // Prevent unexpected text scaling
+  scroll-behavior: smooth; // Enable smooth scrolling
+}
+
+/* Remove default styles for body */
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: hsl(32deg 60% 95.1%);
+  color: hsl(0deg 0.76% 25.69%);
+}
+
+/* Remove border and outline on focus for better accessibility */
+*:focus {
+  outline: none;
+}
+
+/* Remove default styles for lists */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove button default styles */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Ensure buttons have cursor pointer */
+button {
+  cursor: pointer;
+}
+
+/* Remove default table border spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove default fieldset styles */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset quotes for blockquotes and q elements */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+/* Ensure consistent heading styles */
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+/* Remove scrollbar on WebKit browsers */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* Set base font smoothing for better readability */
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove default form input styling in iOS */
+input,
+textarea,
+button,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

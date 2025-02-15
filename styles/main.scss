@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+h2 {
+  font-family: $priFont;
+  font-size: 3rem;
+  line-height: 1em;
+  letter-spacing: 0em;
+}
+
+p {
+  font-family: $secFont;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+main {
+  width: min(100%, 87.5rem);
+  margin: 0 auto;
+  position: relative;
+}
